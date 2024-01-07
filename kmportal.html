@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CYIENT</title>
+    <link rel="icon" type="image/x-icon" href="/img/Icons/CYIENT_favicon.png">
+
+    <!--============= Bootstrap CSS =============-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--============= Google Icon Link =============-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--============= Fontawesome Icon Link =============-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--============= DataTable CSS Link =============-->
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <!--============= Select 2 =============-->
+    <!-- Include Select2 CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+
+    <!--============= Custom CSS =============-->
+    <link rel="stylesheet" href="CSS/select2.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/kmPortal.css">
+
+</head>
+
+<body class="custom-scrollbar scroll-hide">
+
+    <!--************************ header ************************-->
+    <header>
+
+        <!--************* Logo *************-->
+        <figure class="logo-container">
+            <!-- <img src="Img/Cyient_logo.png"> -->
+            <img src="Img/logodesign.png">
+            <!-- <img src="Img/GX_Group_Logo.png"> -->
+        </figure>
+
+        <!--************* heading *************-->
+        <!-- <h1 class="header-heading" contenteditable="true">Knowledge Management Portal</h1> -->
+
+        <ul class="header_menus_container">
+            <!--************* Notification *************-->
+            <li class="header_menu">
+
+                <span class="material-icons header_menu_icon notification" title="Notification">notifications</span>
+
+                <div class="header_submenus_container custom-scrollbar">
+
+                    <h6 class="notification_info">Notification (99+)</h6>
+                    <hr>
+                    <div class="text-warning notification_info">No Notifications</div>
+                    <ul class="header_submenu notification_list">
+                        <li>Lorem ipsum. Lorem</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--************* Apps *************-->
+            <li class="header_menu">
+
+                <span class="material-icons header_menu_icon apps" title="Apps">apps</span>
+
+                <div class="header_submenus_container apps_container custom-scrollbar dark-scrollbar">
+
+                    <a class="header_submenu app" href="#">
+                        <img src="Img/Icons/conveyor.png">
+                        <span class="app_title">RM Portal</span>
+                    </a>
+
+                    <a class="header_submenu app" href="#">
+                        <img src="Img/Icons/packing-machine.png">
+                        <span class="app_title">WIP Portal</span>
+                    </a>
+
+                    <a class="header_submenu app" href="#">
+                        <img src="Img/Icons/delivery-truck.png">
+                        <span class="app_title">Track Delivery</span>
+                    </a>
+
+                    <a class="header_submenu app" href="#">
+                        <img src="Img/Icons/printer.png">
+                        <span class="app_title">Re Pritning</span>
+                    </a>
+
+                    <!-- <a class="header_submenu app" href="#">
+                        <span class="material-icons">cloud_upload</span>
+                    </a> -->
+
+                </div>
+
+            </li>
+
+            <!--************* User Profile *************-->
+            <li class="header_menu">
+
+                <span class="material-icons header_menu_icon profile" title="Profile">account_circle</span>
+
+                <ul class="header_submenus_container user_profile_container custom-scrollbar dark-scrollbar">
+
+                    <li class="header_submenu user_profile">
+                        <a href="javascript:void(0)">
+                            <img class="user_profile_avatar" src="Img/Icons/outlined/hacker_avatar.png">
+                            <h4 class="user_profile_name"><span>Hello, </span>UserName</h4>
+                        </a>
+                    </li>
+
+                    <hr>
+
+                    <li class="header_submenu user_profile"><a href="#"><span
+                                class="material-icons">view_agenda</span>Dashboard</a></li>
+                    <li class="header_submenu user_profile"><a href="#"><span
+                                class="material-icons">settings</span>Setting</a></li>
+                    <li class="header_submenu user_profile"><a href="#"><span class="material-icons">edit</span>Edit
+                            Profile</a></li>
+                    <li class="header_submenu user_profile"><a href="#"><span class="material-icons">lock</span>Change
+                            Password</a></li>
+                    <li class="header_submenu user_profile"><a id="theme_changer"><span
+                                class="material-icons">light_mode</span>Theme<input type="checkbox"></a>
+                    </li>
+
+                    <hr>
+
+                    <li class="header_submenu user_profile"><a href="#"><span
+                                class="material-icons">logout</span>Logout</a></li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </header>
+
+    <!--*********************** main section ***********************-->
+    <div class="main-sections-container">
+        <!--************** Sidenav **************-->
+        <aside class="sidenav main-section ">
+            <ul class="custom-scrollbar">
+                <li>
+                    <a class="sidenav_menu slide_btn">
+                        <span class="material-icons">menu</span>
+                    </a>
+                </li>
+
+                <li class="sidenav_searchbox_container">
+                    <input type="text" class="menusearchbox" oninput="filterMenu(this)" autocomplete="off"
+                        spellcheck="false" placeholder="search">
+                    <div class="material-icons clear_searchbox" onclick="clearSearchBox(this)">close</div>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu" href="kmportal.html">
+                        <img class="sidenav_menu_icon" src="Img/Icons/warehouse.png"><span
+                            class="sidemenu_text">Home</span></a>
+                </li>
+
+                <li class="sidenav_menu_container">
+                    <a class="sidenav_menu submenu_toggle_btn">
+                        <img class="sidenav_menu_icon" src="Img/Icons/leader2.png">
+                        <!-- <span class="material-icons sidenav_menu_icon">group</span> -->
+                        <span class="sidemenu_text">User Management</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container custom-scrollbar">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Change Permission</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Add New Users</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidenav_menu_container">
+                    <a class="sidenav_menu submenu_toggle_btn">
+                        <img class="sidenav_menu_icon" src="Img/Icons/worker.png">
+                        <!-- <span class="material-icons sidenav_menu_icon">manage_accounts</span> -->
+                        <span class="sidemenu_text">Role Management</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span></a>
+                    <ul class="sidenav_submenu_container custom-scrollbar">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Add New Roles</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Edit Roles</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Roles Settings</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidenav_menu_container">
+                    <a class="sidenav_menu submenu_toggle_btn">
+                        <img class="sidenav_menu_icon" src="Img/Icons/masters.png">
+                        <span class="sidemenu_text">Masters</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container custom-scrollbar">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Check List Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Sampling Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Part Wise Customer Mapping Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">BIN Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">QC Inspection Defect Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Email Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Machine Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Approved MPN Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Program Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Physical Location Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Production Line Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Tool Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">BOM Master</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">SAP Location Master</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidenav_menu_container">
+                    <a class="sidenav_menu submenu_toggle_btn">
+                        <img class="sidenav_menu_icon" src="Img/Icons/pallet.png">
+                        <span class="sidemenu_text">RM Modules</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container custom-scrollbar">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Quality Check</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Putaway</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Material Issuance to Shop Floor</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Job Work</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Material return</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidenav_menu_container">
+                    <a class="sidenav_menu submenu_toggle_btn">
+                        <img class="sidenav_menu_icon" src="Img/Icons/conveyormachine.png">
+                        <span class="sidemenu_text">WIP Operation</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container custom-scrollbar">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Serial Generation</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Baking</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Serial Pritning</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidenav_menu_container">
+                    <a class="sidenav_menu submenu_toggle_btn">
+                        <img class="sidenav_menu_icon" src="Img/Icons/report2.png">
+                        <span class="sidemenu_text">Reports</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container custom-scrollbar">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Serial Generation Report</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Putaway Report</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Masters Report</a></li>
+                    </ul>
+                </li>
+
+                <!-- <li>
+                    <a class="sidenav_menu" href="npc_project.html"><img class="sidenav_menu_icon"
+                            src="Img/Icons/npc_projects.png"><span class="sidemenu_text">NPC Projects</span></a>
+                </li> -->
+            </ul>
+
+            <ul class="application-info">
+                <li><img src="Img/bci_logo.png" class="img-fluid"></li>
+                <li>
+                    <p>Version : 1.0.0.0</p>
+                    <p>Server : 192.168.90.83</p>
+                </li>
+            </ul>
+        </aside>
+
+        <!--************** Main Content **************-->
+        <main class="content main-section custom-scrollbar">
+
+            <div class="alert alert-danger alert-dismissible flat show" role="alert">
+                <div class="alert_msg_header">
+                    <span class="material-icons">dangerous</span> ERROR
+                    <div class="material-icons alert_msg_copy_btn">content_copy</div>
+                </div>
+                <div class="alert_msg_container custom-scrollbar">
+                    A network-related or instance-specific error while establishing connection to sql server
+                </div>
+                <a class="material-icons close_btn" data-bs-dismiss="alert">close</a>
+            </div>
+
+            <div class="alert alert-success alert-dismissible flat show" role="alert">
+                <div class="alert_msg_header">
+                    <span class="material-icons">check_circle</span> SUCCESS
+                    <div class="material-icons alert_msg_copy_btn">content_copy</div>
+                </div>
+                <div class="alert_msg_container custom-scrollbar">
+                    Pcb successfully passed at stage: <strong>RF TEST</strong>
+                </div>
+                <a class="material-icons close_btn" data-bs-dismiss="alert">close</a>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible flat show" role="alert">
+                <div class="alert_msg_header">
+                    <span class="material-icons">info</span> ALERT
+                    <div class="material-icons alert_msg_copy_btn">content_copy</div>
+                </div>
+                <div class="alert_msg_container custom-scrollbar">
+                    Pcb failed at last machine : <strong>Bob Test</strong>
+                </div>
+                <a class="material-icons close_btn" data-bs-dismiss="alert">close</a>
+            </div>
+
+            <div class="content_main">
+
+                <!-- main form -->
+                <div class="card mb-2 round" style="min-height: 80vh;">
+                    <div class="card-header p-2">
+                        <h4 class="m-0">Email Master</h4>
+                        <!-- breadcrums -->
+                        <nav
+                            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item">Masters</li>
+                                <li class="breadcrumb-item active" aria-current="page">Email Master</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="card-body">
+                        <form class="row">
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <label for="inputEmail4" class="form-label">Email</label>
+
+                                <input type="email" class="form-control round" autocomplete="off" id="inputEmail4">
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <label for="inputPassword4" class="form-label">Password</label>
+                                <input type="password" class="form-control round" id="inputPassword4">
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control round" id="inputAddress">
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <label for="inputAddress2" class="form-label">Address 2</label>
+                                <input type="text" class="form-control round" id="inputAddress2">
+                                <div class="form-text">Near by location/Area</div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control round" id="inputCity">
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <label for="inputState" class="form-label">State</label>
+                                <select id="inputState" class="form-select round">
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <label for="inputZip" class="form-label">Zip</label>
+                                <input type="number" class="form-control round" id="inputZip">
+                                <div class="form-text">numeric value only</div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="card-footer d-flex justify-content-end p-2 custom-scrollbar">
+                    <button type="submit" class="btn btn-secondary round mx-1">Reset</button>
+                    <button type="submit" class="btn btn-primary round mx-1">Cancel</button>
+                    <button type="submit" class="btn btn-success round mx-1">Submit</button>
+                </div>
+            </div>
+            <!-- main form -->
+
+            <!--********* Post Create *********-->
+            <form id="form" action="javascript:void(0)" method="post">
+
+                <div class="post-writer-options custom-scrollbar scroll-hide">
+
+                    <a href="javascript:void(0)"><img src="Img/Icons/outlined/add_text.png"><span>Write
+                            Post</span></a>
+
+                    <label for="image"><img src="Img/Icons/outlined/picture.png"><input type="file"
+                            class="input_file_selector" id="image" accept="image/*" data-input-file="image"
+                            onchange="image_select()" multiple><span>Add Photo</span></label>
+                    <label for="video"><img src="Img/Icons/outlined/add_video.png"><input type="file" id="video"
+                            class="input_file_selector" accept="video/*" data-input-file="video"
+                            onchange="video_select()" multiple><span>Add
+                            Video</span></label>
+                </div>
+
+                <textarea id="post_textarea" oninput="checkifFormIsEmpty()" spellcheck="false"
+                    class="custom-scrollbar light-scrollbar" placeholder="Write Something..."></textarea>
+
+                <div id="uploaded_file_preview_container" class="post_uploaded_file_container custom-scrollbar">
+
+                </div>
+
+                <div class="post-writer-action-container">
+
+                    <div class="post-writer-action-options function custom-scrollbar">
+                        <span class="material-icons" title="Bold" onclick="boldText()">format_bold</span>
+                        <span class="material-icons" title="Italic" onclick="italicText()">format_italic</span>
+                        <span class="material-icons" title="Underline"
+                            onclick="underlineText()">format_underlined</span>
+                        <span class="material-icons" title="Reset Text" onclick="resetText()">format_clear</span>
+                        <span class="material-icons" title="Select All Text" onclick="selectallText()">select_all</span>
+                        <span class="material-icons" title="Clear All Text" onclick="clearallText()">clear</span>
+                    </div>
+
+                    <div class="post-writer-action-options action">
+                        <button type="reset" id="post_cancel_btn" disabled onclick="delete_image()">Cancel</button>
+                        <button type="submit" id="post_submit_btn" disabled>Post</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Posts section -->
+            <ul>
+                <!--********* Posts *********-->
+                <li>
+                    <div class="post-container">
+
+                        <div class="post-info">
+
+                            <div class="post-info-options user-info">
+
+                                <a href="#">
+                                    <img class="user-info-avatar" src="Img/Icons/outlined/default_avatar2.png">
+                                </a>
+
+                                <ul class="user-info-texts">
+                                    <li class="user-info-text user-username">Username</li>
+                                    <li class="user-info-text user-post-date">2/22/2022</li>
+                                    <time class="user-info-text user-post-time">10:30 AM</time>
+                                </ul>
+
+                            </div>
+
+                            <div class="post-info-options menu">
+
+                                <style>
+                                    .post-info-options {
+                                        position: relative;
+                                    }
+
+                                    .post-info-options-menu {
+                                        position: absolute;
+                                        top: 100%;
+                                        right: 50%;
+                                        background-color: rgb(32, 32, 32);
+                                        color: white;
+                                        width: max-content;
+                                        max-width: 40vw;
+                                        padding: 10px;
+                                        border-radius: 3px;
+                                    }
+                                </style>
+
+                                <span class="material-icons">more_horiz</span>
+                                <!-- <div class="post-info-options-menu">
+                                    <ul>
+                                        <li>edit</li>
+                                        <li>delete</li>
+                                    </ul>
+                                </div> -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="post-content">
+
+                            <div class="post-content-text addReadMore showlesscontent">
+                                The process begins with conceptualizing and designing the product.
+                                Engineers and designers work together to create detailed blueprints and
+                                specifications
+                                that outline the product's form, structure, and function. During this phase, factors
+                                like material selection, cost estimation, and production methods are also taken into
+                                account
+                            </div>
+
+                            <div class="post-content-image">
+                                <img src="Img/manufacturing.webp">
+                            </div>
+
+                        </div>
+
+                        <div class="post-edit custom-scrollbar scroll-hide">
+
+                            <div class="post-edit-options actions">
+
+                                <a href="javascript:void(0)" class="comment_box_toggle_btn">Comment<span
+                                        class="material-icons">comment</span></a>
+                            </div>
+
+                            <div class="post-edit-options functions">
+                                <span class="material-icons image-fullscreen" title="Fullscreen">fullscreen</span>
+                            </div>
+
+                        </div>
+
+                        <!-- comment section -->
+                        <div class="post-comment-section">
+
+                            <div class="comment_header custom-scrollbar scroll-hide">
+
+                                <b class="total_comments">235 Comments</b>
+
+                                <div class="comment_header_select" title="Sort Comments">
+                                    <label for="sort_comments_btn" class="material-icons">sort</label>
+                                    <select id="sort_comments_btn">
+                                        <option value="recent" selected>Most Recent</option>
+                                        <option value="older">Oldest First</option>
+                                        <option value="newer">Newest First</option>
+                                    </select>
+                                </div>
+
+                                <span class="material-icons comment_box_toggle_btn2" title="Close">expand_more</span>
+
+                            </div>
+
+                            <div id="comment_display" class="comments custom-scrollbar slim-scrollbar">
+
+                                <div class="comment">
+                                    <span class="user-avatar">
+                                        <img src="Img/Icons/outlined/default_avatar2.png">
+                                    </span>
+                                    <div class="user-info">
+                                        <span class="username">username</span>
+                                        <time class="time">2days ago</time>
+                                        <p class="comment-text">essitat. Pariatur expe aliquam.☺☻</p>
+                                        <a href="#" class="comment_reply_btn" onclick="appendInputField()"><span
+                                                class="material-icons">shortcut</span>Reply</a>
+
+                                        <style>
+                                            #reply_form button:disabled {
+                                                opacity: 0.5;
+                                                transition: 0.2s;
+                                            }
+
+                                            #reply_form button[type='reset']:disabled {
+                                                display: none !important;
+                                            }
+                                        </style>
+
+                                        <form id="reply_form"
+                                            style="display: flex; align-items: center; margin-bottom: 5px;" action="#"
+                                            onsubmit="appendReply()">
+
+                                            <textarea name="" id="reply_input_text"
+                                                class="custom-scrollbar slim-scrollbar"
+                                                style=" font-size: 14px; resize: none; outline: none; border: 1px solid silver; padding: 10px; width: 100%; border-radius: 3px; margin-right: 5px;"
+                                                rows="1" spellcheck="false" placeholder="Add Reply..."
+                                                onkeyup="toggleDisableBtn()"></textarea>
+
+                                            <div class="loader"></div>
+
+                                            <button type="submit" class="bg-primary"
+                                                style="display: flex; align-items: center; transition: 0.2s; outline: none; border: none; padding: 10px; border-radius: 3px; color: white;">Reply</button>
+
+                                            <button type="reset" class="bg-danger"
+                                                style="display: flex; align-items: center; outline: none; border: none; padding: 10px; border-radius: 3px; margin-left: 5px; color: white;"
+                                                onclick="appendInputField()">Cancel</button>
+
+                                        </form>
+
+                                        <details id="replies">
+                                            <summary></summary>
+
+                                            <div class="comment reply">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">Vivek Kumar</span>
+                                                    <time class="time">10:30 AM</time>
+                                                    <p class="comment-text">essitat. Pariatur expe aliquam.☺☻</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment reply" id="delting-comment">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">username</span>
+                                                    <time class="time">2days ago</time>
+
+                                                    <style>
+                                                        .comment-text {
+                                                            transition: background-color 0.2s, padding 0.2s, border-radius 0.4s;
+                                                        }
+
+                                                        .comment-text[contentEditable="true"] {
+                                                            outline: none;
+                                                            background-color: var(--dark-bg-color);
+                                                            color: white !important;
+                                                            padding: 5px !important;
+                                                            border-radius: 5px;
+                                                            margin-block: 5px !important;
+                                                            font-weight: lighter !important;
+                                                            line-height: normal;
+                                                            transition: background-color 0.2s, padding 0.2s, border-radius 0.4s;
+                                                        }
+
+                                                        button:disabled {
+                                                            opacity: 0.6;
+                                                        }
+                                                    </style>
+
+                                                    <p class="comment-text" id="comment-text">
+                                                        ipsum dolor sit amet consectetur Lorem ipsum, dolor sit amet
+                                                        consectetur adipisicing elit. Quo, vel quas. Eum rerum
+                                                        perferendis quam veritatis quidem non soluta laudantium
+                                                        magni.
+                                                        Officiis cupiditate veniam reiciendis, quis molestias,
+                                                        consequuntur fugit aut distinctio nobis incidunt consequatur
+                                                        esse corrupti nesciunt! Cum perspiciatis ipsum error
+                                                        excepturi
+                                                        tempora! Hic, ut, sed asperiores reiciendis obcaecati ipsa
+                                                        sit
+                                                        repellendus voluptatem laboriosam tempora magni labore?
+                                                        Suscipit
+                                                        placeat minima modi tempore facere architecto iste sequi,
+                                                        quas
+                                                        excepturi nisi, animi, eligendi velit eos deleniti. Laborum,
+                                                        architecto aspernatur, minus quia sequi qui accusantium
+                                                        dolore
+                                                        labore unde error rem officia molestiae voluptatum
+                                                        blanditiis ad
+                                                        a quae corrupti iste optio cumque! Sunt, ducimus.</p>
+
+                                                    <div id="comment-text-btn-container"
+                                                        style="display: none; align-items: center; justify-content: flex-end;">
+                                                        <button
+                                                            style="border: none; outline: none; padding: 5px; font-weight: 500; font-size: smaller; color: white; border-radius: 3px; margin-right: 5px;"
+                                                            class="bg-danger" id="edit_cancel-btn">Cancel</button>
+                                                        <button disabled
+                                                            style="border: none; outline: none; padding: 5px; font-weight: 500; font-size: smaller; color: white; border-radius: 3px;"
+                                                            class="bg-success">Update</button>
+                                                    </div>
+
+                                                </div>
+
+                                                <style>
+                                                    .comment-options {
+                                                        position: relative;
+                                                    }
+
+                                                    .comment-options .material-icons {
+                                                        cursor: pointer;
+                                                        padding: 5px;
+                                                        border-radius: 500px;
+                                                        font-size: 16px;
+                                                    }
+
+                                                    .comment-options .material-icons:hover {
+                                                        background-color: var(--material-icon-bg-hover);
+                                                    }
+
+                                                    .comment-options .options-container {
+                                                        display: none;
+                                                        position: absolute;
+                                                        top: 100%;
+                                                        right: 50%;
+                                                        padding: 5px;
+                                                        border-radius: 5px;
+                                                        max-height: 40vh;
+                                                        max-width: 20vw;
+                                                        background-color: var(--dark-bg-color);
+                                                        filter: drop-shadow(0 2px 5px rgba(75, 72, 72, 0.267));
+                                                    }
+
+                                                    .comment-options .options-container a {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        min-width: max-content;
+                                                        border-radius: 5px;
+                                                        padding: 5px;
+                                                        color: white;
+                                                        font-weight: 600;
+                                                    }
+
+                                                    .comment-options .options-container a:hover {
+                                                        background-color: var(--dark-hover-dark-bg-color);
+                                                    }
+
+                                                    .comment-options .options-container a .material-icons {
+                                                        background-color: rgba(207, 204, 204, 0.418);
+                                                        margin-right: 5px;
+                                                    }
+                                                </style>
+
+                                                <div class="comment-options" id="comment-options">
+                                                    <span class="material-icons"
+                                                        onclick="toggleCommentOption()">more_vert</span>
+                                                    <div class="options-container custom-scrollbar slim-scrollbar"
+                                                        id="option_container">
+                                                        <ul>
+                                                            <li><a href="#" id="edit-comment-btn"><span
+                                                                        class="material-icons">edit</span>Edit</a>
+                                                            </li>
+                                                            <li><a href="#" onclick="popUpdeleteComment()"><span
+                                                                        class="material-icons">delete</span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="comment reply">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">username</span>
+                                                    <time class="time">2days ago</time>
+                                                    <p class="comment-text">Lorem ipsum ulla officia maxime, ullam
+                                                        debitis. Lorem ipsum dolor sit amet consectetur adipisicing
+                                                        elit. Sapiente omnis praesentium animi ratione repellendus
+                                                        totam
+                                                        deleniti velit voluptate molestiae quibusdam nostrum
+                                                        expedita
+                                                        esse rerum eveniet maxime, delectus veritatis perspiciatis
+                                                        similique.
+                                                        adipisicing elit. Lorem ipsum dolor sit amet Lorem ipsum
+                                                        dolor
+                                                        sit amet consectetur, adipisicing elit. Nemo ratione
+                                                        deserunt
+                                                        vero itaque, odio architecto laboriosam et vel mollitia
+                                                        magni,
+                                                        veniam similique corporis qui laudantium vitae, sit in sed
+                                                        autem. consectetur adipisicing elit. Laboriosam quasi
+                                                        maiores
+                                                        rerum asperiores ab saepe libero omnis facere provident,
+                                                        ullam
+                                                        tempora quidem, ipsam necessitatibus iste non iure adipisci
+                                                        consequuntur? Dolorem.</p>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+
+                                </div>
+
+                                <div class="comment">
+                                    <span class="user-avatar">
+                                        <img src="Img/Icons/outlined/default_avatar2.png">
+                                    </span>
+                                    <div class="user-info">
+                                        <span class="username">username</span>
+                                        <time class="time">2days ago</time>
+                                        <p class="comment-text">eum repellat possimus</p>
+                                        <a href="#" class="comment_reply_btn"><span
+                                                class="material-icons">shortcut</span>Reply</a>
+
+                                        <details>
+                                            <summary></summary>
+
+                                            <div class="comment reply">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">username</span>
+
+                                                    <time class="time">2days ago</time>
+                                                    <p class="comment-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Eos, possimus Lorem ipsum dolor sit amet
+                                                        consectetur adipisicing elit. Hic alias iste nobis delectus
+                                                        exercitationem vel similique possimus, quaerat ad illo,
+                                                        explicabo animi esse error iure nemo facilis dolore eligendi
+                                                        ea.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </details>
+
+                                    </div>
+                                </div>
+
+                                <div class="comment">
+                                    <span class="user-avatar">
+                                        <img src="Img/Icons/outlined/default_avatar2.png">
+                                    </span>
+                                    <div class="user-info">
+                                        <span class="username">username</span>
+                                        <time class="time">2days ago</time>
+                                        <p class="comment-text">eum repellat possimus</p>
+                                        <a href="#" class="comment_reply_btn"><span
+                                                class="material-icons">shortcut</span>Reply</a>
+
+                                    </div>
+                                </div>
+
+                                <div class="comment">
+                                    <span class="user-avatar">
+                                        <img src="Img/Icons/outlined/default_avatar2.png">
+                                    </span>
+                                    <div class="user-info">
+                                        <span class="username">username</span>
+                                        <time class="time">2days ago</time>
+                                        <p class="comment-text">eum repellat possimus</p>
+                                        <a href="#" class="comment_reply_btn"><span
+                                                class="material-icons">shortcut</span>Reply</a>
+
+                                        <details>
+                                            <summary></summary>
+
+                                            <div class="comment reply">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">username</span>
+
+                                                    <time class="time">2days ago</time>
+                                                    <p class="comment-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Eos, possimus</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment reply">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">username</span>
+                                                    <time class="time">2days ago</time>
+                                                    <p class="comment-text">adipisicing elit. Quasi officiis placeat
+                                                        eum
+                                                        repellat possimus</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment reply">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">username</span>
+                                                    <time class="time">2days ago</time>
+                                                    <p class="comment-text">adipisicing elit. Quasi officiis placeat
+                                                        eum
+                                                        repellat possimus</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment reply">
+                                                <span class="user-avatar">
+                                                    <img src="Img/Icons/outlined/default_avatar2.png">
+                                                </span>
+                                                <div class="user-info">
+                                                    <span class="username">username</span>
+                                                    <time class="time">2days ago</time>
+                                                    <p class="comment-text">adipisicing elit. Quasi officiis placeat
+                                                        eum
+                                                        Lorem ipsum, dolor sit amet </p>
+                                                </div>
+                                            </div>
+
+                                        </details>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="comment">
+                                    <span class="user-avatar">
+                                        <img src="Img/Icons/outlined/default_avatar2.png">
+                                    </span>
+                                    <div class="user-info">
+                                        <span class="username">username</span>
+                                        <time class="time">2days ago</time>
+                                        <p class="comment-text">eum repellat possimus</p>
+                                        <a href="#" class="comment_reply_btn"><span
+                                                class="material-icons">shortcut</span>Reply</a>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="comment_create_box custom-scrollbar scroll-hide">
+
+                                <img src="Img/Icons/outlined/default_avatar2.png">
+
+                                <form id="comment_form" onsubmit="appendComment()">
+
+                                    <textarea id="comment_text" rows="1" class="add_comment_input custom-scrollbar"
+                                        placeholder="Add Comment..."></textarea>
+                                    <div class="loader"></div>
+                                    <button type="reset" class="material-icons">cancel</button>
+                                    <button type="submit" class="add_comment_btn">Comment</button>
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="post-container">
+
+                        <div class="post-info custom-scrollbar scroll-hide">
+
+                            <div class="post-info-options user-info">
+
+                                <a href="#">
+                                    <img class="user-info-avatar" src="Img/Icons/outlined/default_avatar2.png">
+                                </a>
+
+                                <ul class="user-info-texts">
+                                    <li class="user-info-text user-username">Username</li>
+                                    <li class="user-info-text user-post-time">10:30 AM</li>
+                                    <li class="user-info-text user-post-date">2/22/2022</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="post-info-options menu">
+
+                                <span class="material-icons">more_horiz</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="post-content">
+
+                            <div class="post-content-text addReadMore showlesscontent">
+                                The manufacturing process is an intricate and essential aspect of modern production.
+                                From concept to finished product, it involves careful planning, sourcing, and
+                                production methods, all while ensuring strict quality control. Manufacturing
+                                continues
+                            </div>
+
+                            <div class="post-content-image">
+                                <img src="Img/cyientreception.webp">
+                            </div>
+
+                        </div>
+
+                        <div class="post-edit custom-scrollbar scroll-hide">
+
+                            <div class="post-edit-options actions">
+
+                                <a href="#"><span class="material-icons">comment</span>Comment</a>
+                            </div>
+
+                            <div class="post-edit-options functions">
+                                <!--  -->
+                                <span class="material-icons image-fullscreen" title="Fullscreen">fullscreen</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="post-container">
+
+                        <div class="post-info custom-scrollbar scroll-hide">
+
+                            <div class="post-info-options user-info">
+
+                                <a href="#">
+                                    <img class="user-info-avatar" src="Img/Icons/outlined/default_avatar2.png">
+                                </a>
+
+                                <ul class="user-info-texts">
+                                    <li class="user-info-text user-username">Username</li>
+                                    <li class="user-info-text user-post-time">10:30 AM</li>
+                                    <li class="user-info-text user-post-date">2/22/2022</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="post-info-options menu">
+
+                                <span class="material-icons">more_horiz</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="post-content">
+
+                            <div class="post-content-text addReadMore showlesscontent">
+                                The manufacturing process is an intricate and essential aspect of modern production.
+                                From concept to finished product, it involves careful planning, sourcing, and
+                                production methods, all while ensuring strict quality control. Manufacturing
+                                continues
+                                to be a driving force in economic growth and technological advancement, shaping the
+                                world we live in and influencing our daily lives in numerous ways.
+                            </div>
+
+                            <div class="post-content-image">
+                                <img src="Img/cyientmanu.jpg">
+                            </div>
+
+                        </div>
+
+                        <div class="post-edit custom-scrollbar scroll-hide">
+
+                            <div class="post-edit-options actions">
+
+                                <a href="#"><span class="material-icons">comment</span>Comment</a>
+                            </div>
+
+                            <div class="post-edit-options functions">
+                                <!--  -->
+                                <span class="material-icons image-fullscreen" title="Fullscreen">fullscreen</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="post-container">
+
+                        <div class="post-info custom-scrollbar scroll-hide">
+
+                            <div class="post-info-options user-info">
+
+                                <a href="#">
+                                    <img class="user-info-avatar" src="Img/Icons/outlined/default_avatar2.png">
+                                </a>
+
+                                <ul class="user-info-texts">
+                                    <li class="user-info-text user-username">Username</li>
+                                    <li class="user-info-text user-post-time">10:30 AM</li>
+                                    <li class="user-info-text user-post-date">2/22/2022</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="post-info-options menu">
+
+                                <span class="material-icons">more_horiz</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="post-content">
+
+                            <div class="post-content-text addReadMore showlesscontent">
+                                The manufacturing process is an intricate and essential aspect of modern production.
+                                From concept to finished product, it involves careful planning, sourcing, and
+                                production methods, all while ensuring strict quality control. Manufacturing
+                                continues
+                                to be a driving force in economic growth and technological advancement, shaping the
+                                world we live in and influencing our daily lives in numerous ways.
+                            </div>
+
+                            <div class="post-content-image">
+                                <img src="Img/cyientfactory.webp">
+                            </div>
+
+                        </div>
+
+                        <div class="post-edit custom-scrollbar scroll-hide">
+
+                            <div class="post-edit-options actions">
+
+                                <a href="#"><span class="material-icons">comment</span>Comment</a>
+                            </div>
+
+                            <div class="post-edit-options functions">
+                                <!--  -->
+                                <span class="material-icons image-fullscreen" title="Fullscreen">fullscreen</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+            <!-- Posts section end-->
+
+            <a href="#go_top">Go Top</a>
+    </div>
+    </main>
+    </div>
+
+
+    <!-- Comment Deleting Confirmation Modal -->
+    <style>
+        .comment-delete-conformation-modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: #0000001e; */
+            backdrop-filter: blur(8px);
+            z-index: 200;
+            display: none;
+        }
+
+        .comment-delete-conformation-modal .comment-delete-conformation-modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 60ch;
+            height: max-content;
+            max-height: 90vh;
+            background-color: var(--dark-bg-color);
+            color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            animation: popup 0.5s;
+            /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.329); */
+        }
+
+        .comment-delete-conformation-modal .comment-delete-conformation-modal-content button {
+            padding: 5px 8px;
+            border: none;
+            outline: none;
+            color: white;
+            border-radius: 5px;
+            user-select: none;
+        }
+
+        button:active {
+            background-color: rgba(128, 128, 128, 0.315) !important;
+            /* font-size: 50px; */
+        }
+
+        @keyframes popup {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    </style>
+    <div class="comment-delete-conformation-modal" id="comment-delete-conformation-modal">
+        <div class="comment-delete-conformation-modal-content" id="comment-delete-conformation-modal-content">
+
+            <span class="material-icons"
+                style="align-self: flex-end; cursor: pointer; width: 10%; text-align: center; border-radius: 3px; background-color: rgb(182, 4, 4); padding: 5px 10px;">close</span>
+
+            <h3 class="p-2 px-3 m-0">Are you sure you want to delete your comment ?</h3>
+            <div class="alert-message custom-scrollbar" id="alert-message"
+                style="border-block: 1px solid white; padding: 20px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.♥§☻ Autem minima iste omnis deleniti maxime
+                obcaecati non alias☺☻
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam, dolorum numquam assumenda
+                molestiae odio quaerat voluptatem quae eaque non quis officiis fugiat accusant
+            </div>
+            <div style="display: flex; align-items: center; justify-content: flex-end; padding: 10px;">
+                <button class="bg-secondary">Cancel</button>
+                <button class="bg-danger" style="margin-left: 10px;" onclick="deleteComment()">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- keep it above all the scripts -->
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Jqury CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- Select2 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- DataTable JavaScript -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <!-- Initialize Select2 for all select elements -->
+
+    <!-- custom scripts -->
+    <script src="JS/kmPortal.js"></script>
+</body>
+
+</html>

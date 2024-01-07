@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM Portal</title>
+
+    <!--============= Bootstrap CSS =============-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--============= Google Icon Link =============-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--============= Fontawesome Icon Link =============-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--============= Custom CSS =============-->
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/kmPortal.css">
+
+</head>
+
+<body class="custom-scrollbar scroll-hide">
+
+    <!--************************ header ************************-->
+    <header>
+
+        <!--************* Logo *************-->
+        <figure class="logo-container">
+            <img src="../../Img/NPC-Logo.jpeg">
+        </figure>
+
+        <!--************* heading *************-->
+        <h1 class="header-heading">Knowledge Management Portal</h1>
+
+        <ul class="header_menus_container">
+            <!--************* Notification *************-->
+            <li class="header_menu">
+
+                <span class="material-icons header_menu_icon notification" title="Notification">notifications</span>
+
+                <div class="header_submenus_container notification_container custom-scrollbar scroll-hide"
+                    style="max-height: max-content;">
+
+                    <h6 class="notification_info">Notification (99+)</h6>
+                    <hr>
+                    <div class="text-warning notification_info">No Notifications</div>
+                    <ul class="header_submenu notification_list custom-scrollbar dark-scrollbar">
+                        <li>Lorem ipsum. Lorem ipsum dolor.</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                        <li>Notification</li>
+                    </ul>
+
+                </div>
+
+            </li>
+
+            <!--************* Apps *************-->
+            <li class="header_menu">
+
+                <span class="material-icons header_menu_icon apps" title="Apps">apps</span>
+
+                <div class="header_submenus_container apps_container custom-scrollbar dark-scrollbar">
+
+                    <a class="header_submenu app" href="#">
+                        <img src="../../Img/Icons/outlined/loan.png">
+                        <span class="app_title">Loan Portal</span>
+                    </a>
+
+                    <a class="header_submenu app" href="#">
+                        <img src="../../Img/Icons/outlined/salary2.png">
+                        <span class="app_title">Salary Portal</span>
+                    </a>
+
+                    <a class="header_submenu app" href="#">
+                        <img src="../../Img/Icons/outlined/leave2.png">
+                        <span class="app_title">Leave Portal</span>
+                    </a>
+
+                    <!-- <a class="header_submenu app" href="#">
+                        <span class="material-icons">cloud_upload</span>
+                    </a> -->
+
+                </div>
+
+            </li>
+
+            <!--************* User Profile *************-->
+            <li class="header_menu">
+
+                <span class="material-icons header_menu_icon profile" title="Profile">account_circle</span>
+
+                <ul class="header_submenus_container user_profile_container custom-scrollbar dark-scrollbar">
+
+                    <li class="header_submenu user_profile">
+                        <a href="javascript:void(0)">
+                            <img class="user_profile_avatar" src="../../Img/Icons/outlined/hacker_avatar.png">
+                            <h4 class="user_profile_name"><span>Hello, </span>khanendra kumar</h4>
+                        </a>
+                    </li>
+
+                    <hr>
+
+                    <li class="header_submenu user_profile"><a href="#"><span
+                                class="material-icons">view_agenda</span>Dashboard</a></li>
+                    <li class="header_submenu user_profile"><a href="#"><span
+                                class="material-icons">settings</span>Setting</a></li>
+                    <li class="header_submenu user_profile"><a href="#"><span class="material-icons">edit</span>Edit
+                            Profile</a></li>
+                    <li class="header_submenu user_profile"><a href="javascript:void(0)" id="theme_changer"><span
+                                class="material-icons">light_mode</span>Theme<input type="checkbox"></a>
+                    </li>
+
+                    <hr>
+
+                    <li class="header_submenu user_profile"><a href="#"><span
+                                class="material-icons">logout</span>Logout</a></li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </header>
+
+    <!--*********************** main section ***********************-->
+    <div class="main-sections-container">
+        <!--************** Sidenav **************-->
+        <aside class="sidenav main-section custom-scrollbar scroll-hide">
+            <ul>
+                <li>
+                    <a class="sidenav_menu slide_btn" href="javascript:void(0)">☰</a>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu" href="../../kmportal.html"><img class="sidenav_menu_icon"
+                            src="../../Img/Icons/home.png"><span class="sidemenu_text">Home</span></a>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu submenu_toggle_btn" href="javascript:void(0)">
+                        <img class="sidenav_menu_icon" src="../../Img/Icons/about_us.png">
+                        <span class="sidemenu_text">About Us</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container">
+                        <li><a class="sidenav_menu sidenav_submenu" href="../../pages/about_us/about.html">About Us</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="../../pages/about_us/member.html">Members</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Our Competencies</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Our Regional Offices</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Our Services</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu submenu_toggle_btn" href="javascript:void(0)">
+                        <img class="sidenav_menu_icon" src="../../Img/Icons/document_sharing.png">
+                        <span class="sidemenu_text">Document Sharing</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span></a>
+                    <ul class="sidenav_submenu_container">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Administrative Notifications</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">APO/Intnl Training Report</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">General Instruction</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">General Rules</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Minutes of Meeting</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">NPC Forms</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">NPC Standard Operating Procedures
+                                (SOPS)</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Policy Documents</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Reports</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Proposal Submitted</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Self Skilled Building</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">Training Manuals</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu submenu_toggle_btn" href="javascript:void(0)">
+                        <img class="sidenav_menu_icon" src="../../Img/Icons/discussion_forum.png">
+                        <span class="sidemenu_text">Discussion Forum</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option1</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option2</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option3</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option4</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option5</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option6</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu submenu_toggle_btn" href="javascript:void(0)">
+                        <img class="sidenav_menu_icon" src="../../Img/Icons/blog.png">
+                        <span class="sidemenu_text">Blog</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option1</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option2</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option3</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option4</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option5</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option6</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu submenu_toggle_btn" href="javascript:void(0)">
+                        <img class="sidenav_menu_icon" src="../../Img/Icons/expert_discussion.png">
+                        <span class="sidemenu_text">Expert Discussion</span>
+                        <span class="material-icons dropdown_icon">arrow_drop_down</span>
+                    </a>
+                    <ul class="sidenav_submenu_container">
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option1</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option2</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option3</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option4</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option5</a></li>
+                        <li><a class="sidenav_menu sidenav_submenu" href="#">option6</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a class="sidenav_menu" href="npc_project.html"><img class="sidenav_menu_icon"
+                            src="../../Img/Icons/npc_projects.png"><span class="sidemenu_text">NPC Projects</span></a>
+                </li>
+
+            </ul>
+        </aside>
+
+        <!--************** Main Content **************-->
+        <main class="content main-section custom-scrollbar">
+
+
+          <h1 class="container bg-primary text-white p-2 text-center mb-4">About US</h1>
+          <img src="../../Img/post2.jpg" class="img-fluig" style="outline: 1px solid silver; outline-offset: 5px; float: left; width: 50%; margin-right: 20px; border-radius: 5px; box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.288);">
+          <p style="text-align: justify;">Lorem. Eum beatae, nihil tenetur illum velit labore ducimus assumenda debitis tempora ullam quis pariatur iure ut exercitationem porro culpa? Est recusandae rerum architecto! Eveniet neque repellendus ullam magni natus aliquam omnis eum reiciendis ex voluptatibus hic voluptas minus architecto nostrum quae, distinctio quod, dolorum ipsum, sit voluptatum excepturi doloremque ducimus consectetur? Eius quo ea voluptatem? Officia perferendis quidem, nam dicta nostrum architecto totam harum doloribus corrupti maxime quod, porro doloremque cum placeat est sint, optio recusandae dignissimos rem quasi temporibus iure eaque! Dolore odio omnis, nam corrupti, quod itaque dicta consequatur laborum est voluptate nulla atque facere voluptatem quaerat, ex porro totam. Ullam optio earum esse alias quod beatae, exercitationem totam omnis, quos facilis magni eaque provident, assumenda doloremque suscipit veritatis incidunt sequi quas qui itaque! Cumque animi deserunt vel quas aliquam aliquid labore impedit sequi quam fuga accusantium, quibusdam nobis accusamus possimus incidunt nesciunt fugit mollitia, commodi nostrum aperiam facilis at, assumenda odit iusto? Id, dolores vitae aliquam obcaecati, adipisci hic, quod rerum voluptatibus saepe iste reiciendis. Dolorum ipsa impedit reprehenderit cupiditate ad molestiae iste, molestias vel sit dolore ducimus repellat et provident, nisi atque enim consequuntur minus similique neque aliquam maxime optio? Est suscipit autem recusandae ducimus voluptatibus. Repellendus, doloremque? Aliquid reprehenderit quia iste dolore nesciunt possimus, illo saepe eligendi itaque consectetur, voluptates aperiam dolorum. Omnis quaerat tempore et suscipit assumenda libero eveniet iusto nesciunt perferendis labore voluptate sed, porro quo quam accusantium nihil ea provident neque soluta ipsa dolorum temporibus ad itaque laborum. Laboriosam eaque minus rerum ex dolore sit quod facere ea doloremque tempora nisi, aliquid quasi accusamus? Excepturi.</p>
+          <img src="../../Img/post2.jpg" class="img-fluig" style="outline: 1px solid silver; outline-offset: 5px; float: right; width: 50%; margin-left: 20px; border-radius: 5px; box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.288);">
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nesciunt cum ratione eligendi quia nam optio! Accusantium ducimus deleniti exercitationem debitis, in quasi blanditiis ab architecto. Voluptate alias vel, accusamus sed similique neque, porro ad, aut placeat quae labore impedit quam dolorem natus quasi temporibus ducimus at fugiat assumenda est qui ab. Nam dolorum eligendi deserunt in, animi doloremque tempore ipsum soluta nostrum ipsa. Id ad nesciunt nisi maiores quibusdam quia nihil maxime iusto omnis ipsum itaque, tenetur temporibus ullam quo. Quod cum obcaecati laudantium ducimus non modi possimus quas saepe, minima totam sapiente voluptate eius, maiores animi. Nemo, officiis.</p>
+
+        </main>
+
+        <!--**************** Announcement ****************-->
+        <article class="annoumcement-container main-section custom-scrollbar scroll-hide">
+
+            <ul>
+
+                <li>
+                    <div class="announcement">
+                        <h1 class="announcement-heading">Announcement</h1>
+                        <div class="announcement-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, officiis? Magni unde fugit
+                            in qui, mollitia numquam quisquam, at, tempore suscipit aliquam asperiores. Nemo quis at
+                            consequatur maiores, delectus quae!
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="announcement">
+                        <h1 class="announcement-heading">Announcement</h1>
+                        <div class="announcement-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, officiis? Magni unde fugit
+                            in qui, mollitia numquam quisquam, at, tempore suscipit aliquam asperiores. Nemo quis at
+                            consequatur maiores, delectus quae!
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="announcement">
+                        <h1 class="announcement-heading">Announcement</h1>
+                        <div class="announcement-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, officiis? Magni unde fugit
+                            in qui, mollitia numquam quisquam, at, tempore suscipit aliquam asperiores. Nemo quis at
+                            consequatur maiores, delectus quae!
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="announcement">
+                        <h1 class="announcement-heading">Announcement</h1>
+                        <div class="announcement-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, officiis? Magni unde fugit
+                            in qui, mollitia numquam quisquam, at, tempore suscipit aliquam asperiores. Nemo quis at
+                            consequatur maiores, delectus quae!
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="announcement">
+                        <h1 class="announcement-heading">Announcement</h1>
+                        <div class="announcement-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, officiis? Magni unde fugit
+                            in qui, mollitia numquam quisquam, at, tempore suscipit aliquam asperiores. Nemo quis at
+                            consequatur maiores, delectus quae!
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </article>
+
+    </div>
+
+
+
+
+    <!-- keep it above all the scripts -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jqury CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="../../JS/kmPortal.js"></script>
+
+</body>
+
+</html>
